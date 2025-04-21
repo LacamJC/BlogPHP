@@ -16,7 +16,7 @@ function url($path = '')
 ?>
 
 <body>
-    <form class="container mx-auto mt-5" method="POST" action="">
+    <form class="container mx-auto mt-5" method="POST" action="<?= url('post') ?>">
         <div class="row w-100">
             <div class="col col-6">
                 <div class="mb-3">

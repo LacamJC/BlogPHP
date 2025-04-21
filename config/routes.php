@@ -10,8 +10,8 @@ $router = new Router();
 $router->get('/', 'HomeController@index');
 $router->get('escreva', 'HomeController@cadPost');
 
-$router->get('post', 'PostController@index');
-$router->get('/post/{id}', 'PostController@show');
+$router->post('post', 'PostController@store');
+
 
 return $router;
 
