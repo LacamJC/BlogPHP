@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class HomeController
 {
-    public function index(){
-        echo "Home page";
+    public function index($params = []){
+        require '../views/home.php';
     }
 }
