@@ -11,6 +11,9 @@ $router->get('/', 'HomeController@index');
 $router->get('escreva', 'HomeController@cadPost');
 $router->get('lista', 'PostController@show');
 $router->get('artigos', 'PostController@index');
+
+$router->get('post/{id}', 'PostController@findById');
+
 $router->post('post', 'PostController@store');
 
 

@@ -16,7 +16,9 @@ class HomeController
 
 
     public function cadPost(){
-        require __DIR__ . '/../views/criar_post.php';
+        $layout = new Layout('default');
+        $layout->setData(['title' => 'Escreva seu artigo']);
+        $layout->render('escreva');
     }
 
 }

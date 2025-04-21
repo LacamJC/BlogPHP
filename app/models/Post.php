@@ -15,8 +15,26 @@ class Post
             $conn = Connection::open('blog');
             PostGateway::setConnection($conn);
             $result = PostGateway::all();
-       
+
             return $result;
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        }
+    }
+
+    public static function find($id)
+    {
+        try {
+            // echo "esteou aqui";
+            $conn = Connection::open('blog');
+            PostGateway::setConnection($conn);
+
+            $result = PostGateway::find($id);
+            if($result){
+                return $result;
+            }else{
+                echo "Nenhum registro encontrado";
+            }
         } catch (Exception $e) {
             echo $e->getMessage();
         }

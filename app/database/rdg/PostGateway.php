@@ -25,10 +25,24 @@ class PostGateway
         return $this->data[$prop];
     }
 
-    public static function all(){
+    public static function all()
+    {
         $sql = "SELECT * FROM posts";
         $result = self::$conn->query($sql);
-        return $result->fetchAll(PDO::FETCH_CLASS,__CLASS__);
+        return $result->fetchAll(PDO::FETCH_CLASS, __CLASS__);
+    }
+
+    public static function find($id)
+    {
+        try {
+            $sql = "SELECT * FROM posts WHERE id = '{$id}'";
+            // echo $sql;
+            $result = self::$conn->query($sql);
+
+            return $result->fetchObject(__CLASS__);
+        } catch (Exception $e) {
+            echo $e->getMessage();
+        };
     }
 
     public function save()

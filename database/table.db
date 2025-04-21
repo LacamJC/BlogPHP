@@ -5,3 +5,6 @@ CREATE TABLE posts (
     conteudo TEXT NOT NULL,
     data_publicacao TEXT NOT NULL
 );
+
+ALTER TABLE nome_tabela ADD COLUMN nome_nova_coluna tipo_dados [opções_de_coluna];
+ALTER TABLE posts ADD COLUMN hyperlink TEXT;

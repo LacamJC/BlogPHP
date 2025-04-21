@@ -1,11 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crie seu post</title>
-</head>
-<body>
-    <h1>Bem vindo hora de criar seu primeiro post</h1>
-</body>
-</html>
+<?php
+
+use App\Services\Helper;
+
+?>
+
+<?php if (empty($post)): ?>
+    <p class="alert alert-warning">
+        Erro ao exibir post
+    <p>
+    <?php else: ?>
+
+    <h1 class="fs-2"><?= $post->titulo ?></h1>
+    <p>
+        <?= $post->conteudo ?>
+    </p>
+
+    <span>
+        Autor: <?= $post->autor ?>
+    </span>
+    <br>
+    <span>
+        Publicado em: <?= $post->data_publicacao ?>
+    </span>
+
+<?php endif; ?>
