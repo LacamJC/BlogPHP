@@ -22,9 +22,10 @@ function url($path = '')
         <div class="col-lg-6 mx-auto">
             <p class="lead mb-4">Seja bem vindo ao PHP Core Blog, um blog personalizado feito em PHP puro para estudos aos conceitos bases da linguagem sem uso de frameworks.</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                <!-- <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Crie um artigo</button> -->
+     
                 <a href='<?= url('escreva') ?>' class="btn btn-primary btn-lg px-4 gap-3">Crie um artigo</a>
-                <button type="button" class="btn btn-outline-secondary btn-lg px-4">Últimos artigos</button>
+              
+                <a href='<?= url('lista') ?>' class="btn btn-outline-secondary btn-lg px-4">Últimos artigos</a>
             </div>
         </div>
     </div>

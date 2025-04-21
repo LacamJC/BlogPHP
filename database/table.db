@@ -1,0 +1,7 @@
+CREATE TABLE posts (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    titulo TEXT NOT NULL UNIQUE,
+    autor TEXT NOT NULL,
+    conteudo TEXT NOT NULL,
+    data_publicacao TEXT NOT NULL
+);

@@ -3,6 +3,7 @@
 // ini_set('display_errors', 1);
 
 require '../config/routes.php';
+require '../vendor/autoload.php';
 
 // Debug: mostra a URL sendo capturada
 // echo "URL Capturada: " . ($_GET['url'] ?? '/');

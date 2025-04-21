@@ -1,13 +1,9 @@
 <?php
+
 namespace App\Controllers;
 
-require __DIR__ . '/../../vendor/autoload.php';
-
-
-use App\Api\Connection;
-use App\Database\Rdg\PostGateway;
-use Exception; 
-
+use App\Models\Post;
+use Exception;
 
 class PostController
 {
@@ -18,10 +14,8 @@ class PostController
         require  __DIR__ . '/../views/post.php';
     }
 
-    public function show($params)
-    {
-        $postId = $params['id'];
-        echo "Mostrando o post do id: $postId";
+    public function show(){
+        Post::all();
     }
 
     public function store()
@@ -34,12 +28,9 @@ class PostController
                 'conteudo' => $_POST['artigo'] ?? ''
             ];
 
-            print_r($dados);
-
-            try{
-                $conn = Connection::open('blog');
-                PostGateway::setConnection($conn);
-            }catch(Exception $e){
+            try {
+                Post::store($dados);
+            } catch (Exception $e) {
                 echo $e->getMessage();
             }
         }
