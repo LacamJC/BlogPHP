@@ -8,6 +8,8 @@ use App\Core\Router;
 $router = new Router();
 
 $router->get('/', 'HomeController@index');
+$router->get('escreva', 'HomeController@cadPost');
+
 $router->get('post', 'PostController@index');
 $router->get('/post/{id}', 'PostController@show');
 

@@ -16,4 +16,5 @@ class PostController
         $postId = $params['id'];
         echo "Mostrando o post do id: $postId";
     }
+
 }
