@@ -5,6 +5,6 @@ namespace App\Controllers;
 class HomeController
 {
     public function index($params = []){
-        require '../views/home.php';
+        require __DIR__ . '/../views/home.php';
     }
 }
