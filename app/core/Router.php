@@ -38,7 +38,7 @@ class Router
                 if (class_exists($fullControllerClass)) {
                     $controller = new $fullControllerClass();
                     if (method_exists($controller, $action)) {
-                        $controller->$action($params);
+                        $controller->$action($params ?? []);
                         return;
                     }
                 }
