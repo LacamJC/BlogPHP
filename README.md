@@ -45,4 +45,4 @@ Este projeto é uma base para aprendizado e pode ser expandido com diversas func
 
 ## Autor
 
-LacamJC <a href="https://www.linkedin.com/in/joao-ramajo/">Linkedin</a>
+LacamJC <a target="_BLANK" href="https://www.linkedin.com/in/joao-ramajo/">Linkedin</a>
