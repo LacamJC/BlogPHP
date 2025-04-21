@@ -2,10 +2,16 @@
 
 namespace App\Controllers;
 
+use App\Core\Layout;
+
 class HomeController
 {
     public function index($params = []){
-        require __DIR__ . '/../views/home.php';
+        // require __DIR__ . '/../views/home.php';
+
+        $layout = new Layout('default');
+        $layout->setData(['title' => 'Bem vindo']);
+        $layout->render('home');
     }
 
 

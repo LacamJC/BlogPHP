@@ -11,11 +11,21 @@ class PostController
 
     public function index($params = [])
     {
-        require  __DIR__ . '/../views/post.php';
+        $result = Post::all();
+
+        foreach($result as $item){
+            echo "<h2>{$item->titulo}</h2>";
+            
+        }
     }
 
-    public function show(){
-        Post::all();
+    public function show()
+    {
+
+        $result = Post::all();
+        echo "<pre>";
+        print_r($result);
+        echo "</pre>";
     }
 
     public function store()

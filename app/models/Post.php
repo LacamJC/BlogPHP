@@ -15,9 +15,8 @@ class Post
             $conn = Connection::open('blog');
             PostGateway::setConnection($conn);
             $result = PostGateway::all();
-            echo "<pre>";
-            print_r($result);
-            echo "<pre>";
+       
+            return $result;
         } catch (Exception $e) {
             echo $e->getMessage();
         }
