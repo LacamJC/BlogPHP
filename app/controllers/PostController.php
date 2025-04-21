@@ -15,9 +15,8 @@ class PostController
     {
         $result = Post::all();
 
-        foreach ($result as $item) {
-            echo "<h2>{$item->titulo}</h2>";
-        }
+        $layout = new Layout('default');
+        $layout->setData(['title' => 'Artigos', 'posts' => $result]);
     }
 
     public static function list()

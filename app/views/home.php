@@ -11,7 +11,7 @@ use App\Services\Helper;
      
                 <a href='<?= Helper::url('escreva') ?>' class="btn btn-primary btn-lg px-4 gap-3">Crie um artigo</a>
               
-                <a href='<?= Helper::url('artigos') ?>' class="btn btn-outline-secondary btn-lg px-4">Últimos artigos</a>
+                <a href='<?= Helper::url('lista') ?>' class="btn btn-outline-secondary btn-lg px-4">Últimos artigos</a>
             </div>
         </div>
     </div>
